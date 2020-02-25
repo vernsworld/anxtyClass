@@ -22,7 +22,7 @@ function draw(){
 
     madDude.display();
     madDude.move();
-    for (let i = 0; i < howManyBalls; i++){
+    for (let i = 0; i < howManyDudes; i++){
         dudes[i].move();
         dudes[i].display();
     }

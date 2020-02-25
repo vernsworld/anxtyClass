@@ -29,21 +29,16 @@ function draw(){
 	for (let i = 0; i < howManyPonies; i++){
 		ponies[i].move();
 		for (let j = 0; j < howManyPonies; j++){
-			if ponies[i] != ponies[j]{
-			if (ponies[i].insersects(ponies[j])){
+			if (i !== j && ponies[i].intersects(ponies[j]) && ponies[i].visible && ponies[j].visible){
 				ponies[i].visible = false;
 				ponies[j].visible = false;
-				}
 			}
 		}
 		ponies[i].display();
 	}
 
 	image(apple, mouseBoxX, mouseBoxY, 50, 50);
-	//calling up "intersects" method in the pony class
-	//specific pony 5 and seeing if it's going to 
-	// intersect with pony 3 (in intersects pony3 is considered other)
-	let collision = ponies[5].insersects(ponies[3]);
+
 }
 
 function mousePressed(){
